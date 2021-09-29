@@ -1,6 +1,9 @@
 import sys
 from utils import input_error_seq
 
+# todo: add option to view files using flags i.e. py3 main.py -view <filename>
+# todo: change the "app" to game_board_builder
+
 
 def main():
     print('generate a new set of game boards \ngive a file name and how many boards to generate')

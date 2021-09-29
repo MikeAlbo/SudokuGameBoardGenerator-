@@ -4,3 +4,9 @@ def input_error_seq(error_message, action):
     input("Press ENTER to exit app...")
     print("\n----------------------------\n")
     action()
+
+# todo
+# convert to JSON
+# save JSON to file
+# check if filename exist in directory
+# check if directory exist
