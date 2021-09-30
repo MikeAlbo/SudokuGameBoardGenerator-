@@ -1,5 +1,5 @@
 import sys
-from utils import input_error_seq
+from app.utils import input_error_seq
 
 # todo: add option to view files using flags i.e. py3 main.py -view <filename>
 # todo: change the "app" to game_board_builder
@@ -31,6 +31,6 @@ def main():
         input_error_seq("please enter an integer value (1,5,100,500000000, etc", sys.exit)
 
 
-if __name__ == '__main__':
-    # print(board)
-    main()
+# if __name__ == '__main__':
+#     # print(board)
+#     main()
