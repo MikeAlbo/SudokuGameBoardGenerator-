@@ -1,4 +1,5 @@
 from random import sample
+from app.utils import print_board
 
 
 # bord builder
@@ -20,18 +21,31 @@ def pattern(r, c): return (base*(r % base)+r//base+c) % side
 def shuffle(s): return sample(s, len(s))
 
 
-rBase = range(base)
-rows = [g*base + r for g in shuffle(rBase) for r in shuffle(rBase)]
-cols = [g*base + c for g in shuffle(rBase) for c in shuffle(rBase)]
-nums = shuffle(range(1, base*base+1))
+# rBase = range(base)
+# rows = [g*base + r for g in shuffle(rBase) for r in shuffle(rBase)]
+# cols = [g*base + c for g in shuffle(rBase) for c in shuffle(rBase)]
+# nums = shuffle(range(1, base*base+1))
+#
+# # produce board using randomized baseline pattern
+# board = [[nums[pattern(r, c)] for c in cols] for r in rows]
 
-# produce board using randomized baseline pattern
-board = [[nums[pattern(r, c)] for c in cols] for r in rows]
+def generate_board():
+    r_base = range(base)
+    rows = [g * base + r for g in shuffle(r_base) for r in shuffle(r_base)]
+    cols = [g * base + c for g in shuffle(r_base) for c in shuffle(r_base)]
+    nums = shuffle(range(1, base * base + 1))
+
+    # produce board using randomized baseline pattern
+    return [[nums[pattern(r, c)] for c in cols] for r in rows]
 
 
 def generate_list_of_boards(length):
-    board_dict = {}
+    board_list = []
     for index in range(length):
-        new_board = [[nums[pattern(r, c)] for c in cols] for r in rows]
-        id = index + 1
-        set = {id: board}
+        new_board = generate_board()
+        print(index)
+        print_board(new_board)
+        board_id = index + 1
+        board_set = {board_id: new_board}
+        board_list.append(board_set)
+    return board_list
