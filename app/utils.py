@@ -36,3 +36,10 @@ def print_board(game_board):
     for row in game_board:
         print(row)
     print("\n ------- \n")
+
+
+def write_file(directory, filename, ext, content):
+    file_path = directory + "/" + filename + "." + ext
+    file = open(file_path, "w")
+    file.write(content)
+    file.close()
