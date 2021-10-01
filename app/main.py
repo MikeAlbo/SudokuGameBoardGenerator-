@@ -7,10 +7,10 @@ from app.gameboard_generator import generate_list_of_boards
 
 def main():
     # setup messages to the user
-    print('generate a new set of game boards \ngive a file name and how many boards to generate')
-    print('file will be stored as JSON, no need to add a file extension')
-    print('a game board directory will be created inside your current directory if it does not already exist ')
-    print('game board file will rewrite current files of the same name ')
+    print('\n -generate a new set of game boards \n -give a file name and how many boards to generate')
+    print(' -file will be stored as JSON, no need to add a file extension')
+    print(' -a game board directory will be created inside your current directory if it does not already exist ')
+    print(' -game board file will rewrite current files of the same name ')
     print('\n------------------')
     print('\n -p <filename> to console print file')
     print('\n -open <filename> to open file (EX: "-open readme" will open the readme file )')
