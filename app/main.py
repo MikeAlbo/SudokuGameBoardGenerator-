@@ -1,7 +1,7 @@
 import json
 import argparse
 import sys
-from app.utils import input_error_seq, make_dir, file_exist, write_file, open_file, remove_suffix, print_file, select_open_file
+from app.utils import input_error_seq, make_dir, file_exist, write_file, remove_suffix, print_file, select_open_file
 from app.gameboard_generator import generate_list_of_boards
 
 
