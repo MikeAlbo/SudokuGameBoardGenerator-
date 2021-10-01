@@ -6,8 +6,6 @@ from app.utils import print_board
 # board generating algorithm from -->
 # https://stackoverflow.com/questions/45471152/how-to-create-a-sudoku-puzzle-in-python
 
-# takes in a file name, number of boards and outputs a JSON file with that number of boards and
-# ids
 
 base = 3
 side = base*base
@@ -39,6 +37,8 @@ def generate_board():
     return [[nums[pattern(r, c)] for c in cols] for r in rows]
 
 
+# takes in the number of boards to be generated and returns a list of game board objects
+# game board object = {"id" : [<list of row list>]}
 def generate_list_of_boards(length):
     board_list = []
     for index in range(length):
