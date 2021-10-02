@@ -1,7 +1,7 @@
 import json
 import argparse
 import sys
-from app.utils import input_error_seq, make_dir, file_exist, write_file, remove_suffix, print_file, select_open_file
+from app.utils import input_error_seq, make_dir, file_exist, write_file, remove_suffix, print_from_file, select_open_file
 from app.gameboard_generator import generate_list_of_boards
 
 
@@ -30,7 +30,7 @@ def main():
     # handle the -p flag
     try:
         if args.p:
-            print_file(dir_name, args.p)
+            print_from_file(dir_name, args.p)
     except FileNotFoundError:
         print("unable to load file")
         sys.exit()

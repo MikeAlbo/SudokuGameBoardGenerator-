@@ -19,14 +19,6 @@ def pattern(r, c): return (base*(r % base)+r//base+c) % side
 def shuffle(s): return sample(s, len(s))
 
 
-# rBase = range(base)
-# rows = [g*base + r for g in shuffle(rBase) for r in shuffle(rBase)]
-# cols = [g*base + c for g in shuffle(rBase) for c in shuffle(rBase)]
-# nums = shuffle(range(1, base*base+1))
-#
-# # produce board using randomized baseline pattern
-# board = [[nums[pattern(r, c)] for c in cols] for r in rows]
-
 def generate_board():
     r_base = range(base)
     rows = [g * base + r for g in shuffle(r_base) for r in shuffle(r_base)]

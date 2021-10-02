@@ -86,7 +86,7 @@ def print_game_boards(game_boards):
 
 
 # prints a game board json file
-def print_file(directory, filename):
+def print_from_file(directory, filename):
     full_file_name = "%s.json" % remove_suffix(filename)
     with open("%s/%s" % (directory, full_file_name)) as f:
         data = json.load(f)
