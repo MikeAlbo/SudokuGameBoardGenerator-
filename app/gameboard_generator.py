@@ -38,6 +38,6 @@ def generate_list_of_boards(length):
         print(index)
         print_board(new_board)
         board_id = index + 1
-        board_set = {board_id: new_board}
+        board_set = {"board_id": board_id, "game_board": new_board}
         board_list.append(board_set)
     return board_list
