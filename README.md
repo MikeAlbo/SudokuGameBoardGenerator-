@@ -5,7 +5,7 @@ a Python 3 console app that generates a list of Sudoku Game Boards.
 ## to run
 1. `cd <project dir>`
 2. run: `Python3 gameboards.py`
-3. follow promoted instructions
+3. follow prompted instructions
 
 ## JSON structure
 ```json
