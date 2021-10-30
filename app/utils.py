@@ -68,6 +68,14 @@ def print_board(game_board):
     print("\n ------- \n")
 
 
+def print_board_set(board_set):
+    print("board_id: %s" % (board_set["board_id"]))
+    board = board_set["game_board"]
+    for row in board:
+        print(row)
+    print("\n ------- \n")
+
+
 # writes the new file to the given directory
 def write_file(directory, filename, ext, content):
     file_path = directory + "/" + filename + "." + ext

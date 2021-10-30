@@ -1,5 +1,5 @@
 from random import sample
-from app.utils import print_board
+from app.utils import print_board, print_board_set
 
 
 # bord builder
@@ -30,14 +30,13 @@ def generate_board():
 
 
 # takes in the number of boards to be generated and returns a list of game board objects
-# game board object = {"id" : [<list of row list>]}
+# game board object = {"board_id": int, "game_board": [<list of row list>]}
 def generate_list_of_boards(length):
     board_list = []
     for index in range(length):
         new_board = generate_board()
-        print(index)
-        print_board(new_board)
         board_id = index + 1
         board_set = {"board_id": board_id, "game_board": new_board}
+        print_board_set(board_set)
         board_list.append(board_set)
     return board_list
